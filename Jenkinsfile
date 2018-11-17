@@ -40,12 +40,13 @@ pipeline {
                                                                    "files": [
       					                               {
                                                                            "pattern": "target/*.war",
-                                                                           "target": "generic-local/"
+                                                                           "target": "generic-local/devops_pipline"
                                                                          }
                                                                             ]
                                                                 }"""
 	  		      
 	  			                              server.upload(uploadSpec)
+					         echo 'artifact uploaded'
 	  			      }
       
                                        }
