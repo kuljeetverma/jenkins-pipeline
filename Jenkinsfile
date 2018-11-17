@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-
+/*
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
@@ -28,5 +28,27 @@ pipeline {
                 }
             }
         }
+        */
+        stage('upload on Artifactory')    {
+                                 steps {
+                                        echo 'Artifactory server upload'
+      				      script 
+	 			      {
+      
+                                            def server = Artifactory.server('Artifactory-server')              
+                                            def uploadSpec = """{
+                                                                   "files": [
+      					                               {
+                                                                           "pattern": "target/*.war",
+                                                                           "target": "example-repo-local/devops_assignment"
+                                                                         }
+                                                                            ]
+                                                                }"""
+	  		      
+	  			                              server.upload(uploadSpec)
+	  			      }
+      
+                                       }
+                               }
     }
 }
