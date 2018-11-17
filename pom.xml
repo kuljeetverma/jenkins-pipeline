@@ -55,18 +55,6 @@
 
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>myMavenRepo.read</id>
-            <url>http://localhost:8081/artifactory/myMavenRepo/</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>myMavenRepo.write</id>
-            <url>http://localhost:8081/artifactory/myMavenRepo/</url>
-        </repository>
-    </distributionManagement>
+  
 
 </project>
