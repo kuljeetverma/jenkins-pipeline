@@ -40,7 +40,7 @@ pipeline {
                                                                    "files": [
       					                               {
                                                                            "pattern": "target/*.war",
-                                                                           "target": "example-repo-local/devops_assignment"
+                                                                           "target": "generic-local/"
                                                                          }
                                                                             ]
                                                                 }"""
