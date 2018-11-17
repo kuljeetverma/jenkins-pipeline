@@ -39,7 +39,7 @@ pipeline {
                                             def uploadSpec = """{
                                                                    "files": [
       					                               {
-                                                                           "pattern": "target/*.war",
+                                                                           "pattern": "target/*.jar",
                                                                            "target": "generic-local/devops_pipline"
                                                                          }
                                                                             ]
